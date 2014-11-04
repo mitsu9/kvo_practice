@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ea4-UN-iwu" customClass="AddModalView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="442-6F-vr9" userLabel="dismiss view">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Nb-1Gb">
+                            <rect key="frame" x="15" y="210" width="570" height="178.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMc-ay-st3">
+                                    <rect key="frame" x="8" y="8" width="554" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-0N-YOj">
+                                    <rect key="frame" x="15" y="36" width="547" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Ea4-UN-iwu" id="yVO-jj-tgY"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukr-jA-Xub">
+                                    <rect key="frame" x="8" y="74" width="554" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBV-d6-hCt">
+                                    <rect key="frame" x="15" y="102" width="547" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Ea4-UN-iwu" id="oxb-Yn-fdG"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPU-X7-QpN">
+                                    <rect key="frame" x="532" y="140" width="30" height="30"/>
+                                    <state key="normal" title="Add">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pressAdd:" destination="Ea4-UN-iwu" eventType="touchUpInside" id="cGP-kV-5WV"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Ukr-jA-Xub" firstAttribute="leading" secondItem="1OF-Nb-1Gb" secondAttribute="leading" constant="8" id="8E4-JK-DCr"/>
+                                <constraint firstItem="DBV-d6-hCt" firstAttribute="top" secondItem="Ukr-jA-Xub" secondAttribute="bottom" constant="8" id="CYD-FV-36Z"/>
+                                <constraint firstAttribute="bottom" secondItem="zPU-X7-QpN" secondAttribute="bottom" constant="8" id="Kt8-Vr-gg4"/>
+                                <constraint firstAttribute="trailing" secondItem="UMc-ay-st3" secondAttribute="trailing" priority="500" constant="8" id="NfT-7F-kyh"/>
+                                <constraint firstItem="zPU-X7-QpN" firstAttribute="top" secondItem="DBV-d6-hCt" secondAttribute="bottom" constant="8" id="Qfz-es-4ZT"/>
+                                <constraint firstAttribute="trailing" secondItem="rKZ-0N-YOj" secondAttribute="trailing" priority="500" constant="8" id="Qkx-rX-c5G"/>
+                                <constraint firstAttribute="trailing" secondItem="zPU-X7-QpN" secondAttribute="trailing" priority="500" constant="8" id="T3I-5E-s4y"/>
+                                <constraint firstItem="rKZ-0N-YOj" firstAttribute="top" secondItem="UMc-ay-st3" secondAttribute="bottom" constant="8" id="VbY-7A-aqV"/>
+                                <constraint firstAttribute="trailing" secondItem="DBV-d6-hCt" secondAttribute="trailing" priority="500" constant="8" id="WQZ-k6-9V5"/>
+                                <constraint firstItem="Ukr-jA-Xub" firstAttribute="top" secondItem="rKZ-0N-YOj" secondAttribute="bottom" constant="8" id="Wl0-i1-wo8"/>
+                                <constraint firstItem="UMc-ay-st3" firstAttribute="top" secondItem="1OF-Nb-1Gb" secondAttribute="top" constant="8" id="dOe-Y2-GiS"/>
+                                <constraint firstItem="rKZ-0N-YOj" firstAttribute="leading" secondItem="1OF-Nb-1Gb" secondAttribute="leading" constant="15" id="e7r-WQ-7co"/>
+                                <constraint firstItem="UMc-ay-st3" firstAttribute="leading" secondItem="1OF-Nb-1Gb" secondAttribute="leading" constant="8" id="mRo-2z-abc"/>
+                                <constraint firstItem="DBV-d6-hCt" firstAttribute="leading" secondItem="1OF-Nb-1Gb" secondAttribute="leading" constant="15" id="swm-tb-url"/>
+                                <constraint firstAttribute="trailing" secondItem="Ukr-jA-Xub" secondAttribute="trailing" priority="500" constant="8" id="wr0-Zc-a5V"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="1OF-Nb-1Gb" secondAttribute="centerY" id="2gd-kI-LOc"/>
+                        <constraint firstAttribute="trailing" secondItem="1OF-Nb-1Gb" secondAttribute="trailing" constant="15" id="TX3-Oa-boj"/>
+                        <constraint firstItem="1OF-Nb-1Gb" firstAttribute="leading" secondItem="442-6F-vr9" secondAttribute="leading" constant="15" id="nRG-RE-Q0u"/>
+                        <constraint firstAttribute="centerX" secondItem="1OF-Nb-1Gb" secondAttribute="centerX" id="oL1-hz-rCe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="442-6F-vr9" secondAttribute="bottom" id="Dv4-NB-otU"/>
+                <constraint firstAttribute="trailing" secondItem="442-6F-vr9" secondAttribute="trailing" id="MXo-G0-Nhk"/>
+                <constraint firstItem="442-6F-vr9" firstAttribute="top" secondItem="Ea4-UN-iwu" secondAttribute="top" id="Y3N-So-9HP"/>
+                <constraint firstItem="442-6F-vr9" firstAttribute="leading" secondItem="Ea4-UN-iwu" secondAttribute="leading" id="ZM7-gc-iYR"/>
+            </constraints>
+            <connections>
+                <outlet property="dismissView" destination="442-6F-vr9" id="fVA-2O-QLc"/>
+                <outlet property="keyboardHeight" destination="Dv4-NB-otU" id="s7J-Tv-LCu"/>
+                <outlet property="memoTextField" destination="DBV-d6-hCt" id="9zA-K4-Yal"/>
+                <outlet property="titleTextField" destination="rKZ-0N-YOj" id="eVf-Jt-KT9"/>
+            </connections>
+            <point key="canvasLocation" x="531" y="373"/>
+        </view>
+    </objects>
+</document>

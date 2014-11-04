@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddModalView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ModalViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
